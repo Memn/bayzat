@@ -1,5 +1,10 @@
 <div class="row">
     <div class="col-md-2">
+        <h3>{{room.title}}</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
       {{bs-switch name="my-bs-switch"
       btnSize="small"
       onText="ON"
@@ -28,10 +33,5 @@
         {{#bs-button icon="glyphicon glyphicon-fire" disabled="true"}}{{room.temperatureDesired}}°C{{/bs-button}}
         {{#bs-button action=(action 'incrementTemperature' room)}}+{{/bs-button}}
       {{/bs-button-group}}
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-2">
-        <h3>{{room.title}}</h3>
     </div>
 </div>

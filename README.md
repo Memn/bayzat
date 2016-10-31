@@ -1,5 +1,10 @@
 # Bayzat
 
+This application contains basic home controlling system. 
+ 
+Main page lists the houses. Each house routes to a house item. House items demonstrate house's attributes 
+and room's list. You can set attributes of rooms by this page.
+
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 

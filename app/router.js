@@ -12,9 +12,7 @@ Router.map(function() {
   this.route('houses', function() {
     this.route('show', { path: '/:id' }, function() {});
   });
-  this.route('rooms', function() {
-    this.route('show', { path: '/:id' }, function() {});
-  });
+  this.route('rooms', function() {});
 });
 
 export default Router;

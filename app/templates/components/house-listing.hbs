@@ -1,0 +1,24 @@
+<!-- <article class="listing"> -->
+  <!-- <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
+    <img src="{{house.image}}" alt="">
+    <small>View Larger</small>
+  </a> -->
+  <div class="row">
+    <div class="col-md-3">
+      <img class="img-rounded img-responsive" src="{{house.image}}" alt="">
+    </div>
+    <div class="col-md-9">
+      <h3>{{#link-to "houses.show" house}}{{house.title}}{{/link-to}}</h3>
+      <div class="list-group-item-text">
+        <span>Owner:</span> {{house.owner}}
+      </div>
+      <div class="list-group-item-text">
+        <span>Address:</span> {{house.address}}
+      </div>
+      <!-- <div class="list-group-item-text">
+        <span>Rooms:</span> {{house.rooms.length}}
+      </div> -->
+    </div>
+  </div>
+
+<!-- </article> -->

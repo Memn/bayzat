@@ -1,0 +1,18 @@
+{
+  "name":"bayzat",
+  "description":"bayzat",
+  "repository": "https://github.com/Memn/bayzat",
+  "env": {
+    "EMBER_ENV": {
+      "description": "Environment desired for ember-cli builds",
+      "value": "production"
+    },
+    "NODE_ENV": "production",
+    "NPM_CONFIG_PRODUCTION":"false"
+  },
+  "buildpacks": [
+    { "url": "https://github.com/heroku/heroku-buildpack-nodejs" },
+    { "url": "https://github.com/heroku/heroku-buildpack-ember-cli" },
+    { "url": "https://github.com/hone/heroku-buildpack-static" }
+  ]
+}

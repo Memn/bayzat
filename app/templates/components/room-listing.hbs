@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-2">
+        <h3>{{room.title}}</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+      {{bs-switch name="my-bs-switch"
+      btnSize="small"
+      onText="ON"
+      offText="OFF"
+      onColor='success'
+      offColor='warning'
+      labelText="Lights"
+      status=room.lights
+      callback="toggleLights"}}
+    </div>
+    <div class="col-md-3">
+      {{bs-switch name="my-bs-switch"
+      btnSize="small"
+      onText="OPEN"
+      offText="CLOSED"
+      onColor='success'
+      offColor='warning'
+      labelText="Curtains"
+      status=room.curtains
+      callback="toggleCurtains"}}
+    </div>
+    <div class="col-md-4">
+      {{#bs-button-group}}
+        {{#bs-button action=(action 'decrementTemperature' room)}}-{{/bs-button}}
+        {{#bs-button icon="glyphicon glyphicon-fire" disabled="true"}}{{room.temperature}}°C{{/bs-button}}
+        {{#bs-button action=(action 'incrementTemperature' room)}}+{{/bs-button}}
+      {{/bs-button-group}}
+    </div>
+</div>

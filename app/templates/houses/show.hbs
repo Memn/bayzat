@@ -1,0 +1,28 @@
+<div class="panel panel-default">
+    <div class="panel-heading">{{model.title}}</div>
+    <p/>
+    <div class="row">
+        <div class="col-md-6">
+            <img class="img-rounded img-responsive" src="{{model.image}}">
+        </div>
+        <div class="col-md-6">
+            <div class="detail owner">
+                <strong>Owner:</strong> {{model.owner}}
+            </div>
+            <div class="detail">
+                <strong>Location:</strong> {{model.address}}
+            </div>
+            <div class="detail">
+                <strong>Number of rooms:</strong> {{model.rooms.length}}
+            </div>
+        </div>
+    </div>
+    <p/>
+    <ul class="list-group">
+      {{#each model.rooms as |roomUnit|}}
+          <a class="list-group-item">
+            {{room-listing room=roomUnit}}
+          </a>
+      {{/each}}
+    </ul>
+</div>

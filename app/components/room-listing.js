@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  isHot: true,
+
   actions: {
     toggleLights(){
       this.toggleProperty('lights');
@@ -9,10 +11,10 @@ export default Ember.Component.extend({
       this.toggleProperty('curtains');
     },
     decrementTemperature(room){
-      room.decrementProperty('temperature', 0.5);
+      room.decrementProperty('temperatureDesired', 0.5);
     },
     incrementTemperature(room){
-      room.incrementProperty('temperature', 0.5);
+      room.incrementProperty('temperatureDesired', 0.5);
     }
   }
 })

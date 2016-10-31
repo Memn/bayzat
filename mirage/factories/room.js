@@ -1,10 +1,11 @@
-import {Factory} from 'ember-cli-mirage';
+import {Factory, faker} from 'ember-cli-mirage';
 
 export default Factory.extend({
   title(i){
     return 'Room ' + i;
   },
-  lights     : true,
-  temperature: 22,
-  curtains   : false
+  lights            : true,
+  temperatureCurrent: faker.random.number({'min': 13, 'max': 35}),
+  temperatureDesired: faker.random.number({'min': 13, 'max': 35}),
+  curtains          : false
 });

@@ -1,16 +1,14 @@
-{{#list-filter filter=(action 'filterChanged') as |houses|}}
-    <div class="panel panel-default">
-        <div class="panel-heading">Houses</div>
-
-        <ul class="list-group">
-          {{#each houses as |houseUnit|}}
-              <a class="list-group-item">
-                {{#link-to "houses.show" houseUnit}}
-                  {{house-listing house=houseUnit}}
-                {{/link-to}}
-              </a>
-          {{/each}}
-        </ul>
-    </div>
-{{/list-filter}}
+{{list-filter filter=(action 'filterChanged')}}
+<div class="panel panel-default">
+    <div class="panel-heading">Houses</div>
+    <ul class="list-group">
+      {{#each model as |houseUnit|}}
+          <a class="list-group-item">
+            {{#link-to "houses.show" houseUnit}}
+              {{house-listing house=houseUnit}}
+            {{/link-to}}
+          </a>
+      {{/each}}
+    </ul>
+</div>
 {{outlet}}

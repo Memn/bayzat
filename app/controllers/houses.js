@@ -3,11 +3,13 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   actions: {
     filterChanged(param) {
+      var houses;
       if (param !== '') {
-        return this.get('store').query('house', { address: param });
+        houses = this.get('store').query('house', {address: param});
       } else {
-        return this.get('store').findAll('house');
+        houses = this.get('store').findAll('house');
       }
+      this.set('model', houses);
     }
   }
 });
